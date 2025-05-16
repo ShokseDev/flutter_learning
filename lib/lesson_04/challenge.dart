@@ -16,8 +16,8 @@ void main() {
   }
 
   // Simple enumeration
-  for (var films in films) {
-    print(films);
+  for (var film in films) {
+    print(film);
   }
 
   // Film search
