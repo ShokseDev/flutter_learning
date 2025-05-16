@@ -1,0 +1,71 @@
+# Flutter/Dart specific settings for Git
+
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Dart files
+*.dart text diff=dart
+
+# Flutter/Dart build files
+*.lock text
+pubspec.yaml text
+pubspec.lock text
+
+# Documents
+*.md text diff=markdown
+*.txt text
+*.rtf text diff=astextplain
+*.pdf -text
+LICENSE text
+
+# Graphics
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+
+# Scripts
+*.sh text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# UI files
+*.json text
+*.yaml text
+*.yml text
+*.xml text
+
+# Archive files
+*.7z binary
+*.gz binary
+*.jar binary
+*.rar binary
+*.tar binary
+*.zip binary
+
+# Miscellaneous
+.gitattributes text
+.gitignore text
+.gitconfig text
+
+# Denote all files that are truly binary and should not be modified
+*.p12 binary
+*.keystore binary
+*.jks binary
+
+# Additional Flutter/Dart specific files
+*.arb text
+*.properties text
+*.g.dart text
+*.freezed.dart text
+
+# Handle project-specific files
+android/* linguist-vendored
+ios/* linguist-vendored
+web/* linguist-vendored
+
+# The flutter tool always uses LF
+gradlew text eol=lf
+
