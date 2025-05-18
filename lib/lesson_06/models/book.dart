@@ -1,13 +1,18 @@
-class Book {
+import 'media.dart';
+
+class Book extends Media {
   // Class fields
-  final String title;
-  final String author;
-  final int year;
+  final String _author;
+
+  String get author => _author;
 
   // Class constructor
-  Book({required this.title, required this.author, required this.year});
+  Book({required String title, required String author, required int year})
+    : _author = author {
+    this.title = title;
+    this.year = year;
+  }
 
-  // Class methods
-  String get description => '$title by $author ($year)';
-  bool get isClassic => year < 1970;
+  @override
+  String description() => '$title by $author ($year)';
 }

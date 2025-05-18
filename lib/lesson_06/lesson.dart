@@ -6,8 +6,8 @@ import 'utils/filter_utils.dart';
 void main() {
   // Creating an object of a book class
   final book = Book(title: 'Foundation', author: 'Isaac Asimov', year: 1951);
-  print('Description: ${book.description}');
-  print(book.isClassic ? 'Classic' : 'Newbie');
+  print('Book description: ${book.description()}');
+  print(book.isClassic() ? 'Classic' : 'Newbie');
 
   // Creating a list of film objects
   final films = [
@@ -18,8 +18,8 @@ void main() {
     Film(title: 'The Dark Knight', year: 2008),
   ];
 
-  printFilmsWithFilter(films, 'Classic films:', (f) => f.isClassic);
-  printFilmsWithFilter(films, 'Modern films:', (f) => !f.isClassic);
+  printFilmsWithFilter(films, 'Classic films:', (f) => f.isClassic());
+  printFilmsWithFilter(films, 'Modern films:', (f) => !f.isClassic());
 
   var recentFilms = filterFilmsByYear(films, 1990, 2010);
 
