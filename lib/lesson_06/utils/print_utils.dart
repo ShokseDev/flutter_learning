@@ -8,7 +8,7 @@ void printFilmsWithFilter(
   print(header);
   for (var film in films) {
     if (filter(film)) {
-      print(film.description());
+      print(film.description);
     }
   }
 }
@@ -16,6 +16,6 @@ void printFilmsWithFilter(
 void printFilms(List<Film> films, String header) {
   print(header);
   for (var film in films) {
-    print(film.description());
+    print(film.description);
   }
 }

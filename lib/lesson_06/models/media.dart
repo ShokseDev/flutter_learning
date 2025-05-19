@@ -1,7 +1,7 @@
 // Abstract media class
 abstract class Media {
-  late String _title;
-  late int _year;
+  String _title = '';
+  int _year = 0;
 
   // Constructor
   Media({required String title, required int year}) {
@@ -30,7 +30,7 @@ abstract class Media {
   }
 
   // Abstract methods;
-  void description();
+  String get description;
 
   bool isClassic() {
     return year <= 1980;
