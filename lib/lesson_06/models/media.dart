@@ -3,6 +3,13 @@ abstract class Media {
   late String _title;
   late int _year;
 
+  // Constructor
+  Media({required String title, required int year}) {
+    // Now setters wil work in initialization
+    this.title = title;
+    this.year = year;
+  }
+
   String get title => _title;
   int get year => _year;
 

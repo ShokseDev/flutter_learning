@@ -4,14 +4,10 @@ class Book extends Media {
   // Class fields
   final String _author;
 
-  String get author => _author;
+  Book({required super.title, required super.year, required String author})
+    : _author = author;
 
-  // Class constructor
-  Book({required String title, required String author, required int year})
-    : _author = author {
-    this.title = title;
-    this.year = year;
-  }
+  String get author => _author;
 
   @override
   String description() => '$title by $author ($year)';
