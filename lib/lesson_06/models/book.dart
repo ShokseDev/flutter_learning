@@ -10,5 +10,5 @@ class Book extends Media {
   String get author => _author;
 
   @override
-  get description => '$title by $author ($year)';
+  String get description => '$title by $author ($year)';
 }

@@ -1,8 +1,13 @@
 import 'media.dart';
 
 class Film extends Media {
-  Film({required super.title, required super.year});
+  final String? director;
+
+  Film({required super.title, required super.year, this.director});
+
+  bool get hasDirector => director != null;
 
   @override
-  get description => '$title ($year)';
+  String get description =>
+      hasDirector ? '$title by $director ($year)' : '$title ($year)';
 }

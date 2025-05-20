@@ -12,5 +12,5 @@ class Podcast extends Media {
   List<String> get platform => _platform;
 
   @override
-  get description => '$title ($year) on ${platform.join(', ')}';
+  String get description => '$title ($year) on ${platform.join(', ')}';
 }

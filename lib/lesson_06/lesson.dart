@@ -36,4 +36,7 @@ void main() {
   for (var media in modernMedia) {
     print(media.description);
   }
+
+  var film = Film(title: 'Alien', year: 1979, director: 'Ridley Scott');
+  print(film.description);
 }
