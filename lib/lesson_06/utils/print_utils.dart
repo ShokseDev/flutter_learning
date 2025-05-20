@@ -1,21 +1,11 @@
-import '../models/film.dart';
+import '../models/media.dart';
 
-void printFilmsWithFilter(
-  List<Film> films,
-  String header,
-  bool Function(Film) filter,
-) {
-  print(header);
-  for (var film in films) {
-    if (filter(film)) {
-      print(film.description);
-    }
+void printMedia(Media media) => print(media.description);
+
+void printClassicOnly(Media media, bool Function(Media) filter) {
+  if (filter(media)) {
+    print(media);
   }
 }
 
-void printFilms(List<Film> films, String header) {
-  print(header);
-  for (var film in films) {
-    print(film.description);
-  }
-}
+void printAllInCaps(Media media) => print(media.description.toUpperCase());

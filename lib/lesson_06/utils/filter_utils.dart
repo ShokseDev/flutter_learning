@@ -1,5 +1,6 @@
-import '../models/film.dart';
+import '../models/media.dart';
 
-List<Film> filterFilmsByYear(List<Film> films, int from, int to) {
-  return films.where((f) => f.year >= from && f.year <= to).toList();
+/// Filters a list of media items based on a given filter function.
+List<Media> modernMediaFilter(List<Media> mediaList) {
+  return mediaList.where((m) => m.year > 2000).toList();
 }
